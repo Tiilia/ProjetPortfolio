@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+}
+/*------------------------------------------ Mise en place de la navigation ---------------------------------*/
+nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 5vh;
+    background-color:aliceblue;
+    box-shadow: 0px 10px 10px 10px rgba(27, 39, 49, .05); /*horizontal vertical blur scale couleur */
+    border-bottom: 1px solid #ffb5cc;
+    z-index: 1;
+}
+.logo{
+    color: #b59bdf;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.4em;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+.nav-links li{
+    list-style: none;
+    margin: 0 15px;
+}
+.nav-links a{
+    color: #5c7d97;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: 0.8s ease;
+    
+}
+.nav-links a:hover{
+    background-image: linear-gradient(20deg,rgba(255, 181, 204,.5)10%, rgba(157, 210, 216, .5) ) ; 
+    color: aliceblue;
+    text-shadow: 1px 1px 2px rgba(27, 39, 49, 0.5);
+    border-radius: 5px;
+    padding: 11px;
+
+}
+
+/* Buton hamburger */
+.burger{
+    display: none;
+    cursor: pointer;
+}
+/* construction du bouton */
+.burger div{
+    width: 35px;
+    height: 5px;
+    background-color: #ffb5cc;
+    margin: 5px;
+    border-radius: 4px;
+    /* transition douce pour l'animation de la transformation burger/croix */
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+/* Animation burger */
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,9px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-9px);
+}
+
+
+
+
+/* palette ************************ */
+.palette{
+    display: none;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 10px;
+    top:10vh;
+    position: fixed;
+    color: #1b2731;
+    background-color: aliceblue;
+    border: 2px solid #1b2731;
+    border-radius: 10px;    
+}
+.palette div{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+    border-radius: 2px;
+}
+.palette1{
+    background-color: #5c7d97;
+}
+.palette2{
+    background-color: #9dd2d8;
+}
+.palette3{
+    background-color: #f5ecee;
+}
+.palette4{
+    background-color: #ffb5cc;
+}
+.palette5{
+    background-color: #b59bdf;
+}
+
+
+/* Mise en place Main -----------------------------------------------*/
+
+main{
+    color: #1b2731;
+    margin: 0 auto;
+}
+main h2{
+    padding: 10px 30px;
+    color: aliceblue;
+    text-shadow: 1px 1px 2px rgba(27, 39, 49, 0.5);
+}
+
+
+.panel {
+    padding-top: 8vh;
+    height: 100vh;
+    background-color: aliceblue;
+    /* margin-bottom: 400px; */
+}
+
+/* -------------------------------------------- Home -------------------------------------------- */
+#home{
+    padding-top:18vh;
+    text-align: center;
+}
+.identite{
+    margin-left: 30vw;
+    padding: 60px 0 30px 0;
+    color: #5c7d97;
+    font-style: italic;
+    line-height: 60px;
+    text-shadow: 1px 2px #b59bdf;
+}    
+.nom{
+    margin-left: 7vw;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 700;
+    
+}
+.prenom{
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.titre{
+    margin: 0 10vw;
+}
+.titre p{    
+    text-transform: uppercase;
+    line-height: 120px;
+    font-size: 8em;
+    font-weight: 800;
+    background-color: #f5ecee;
+    background-image: conic-gradient(#ffb5cc 20%, #9dd2d8 10%, #b59bdf 40%, #5c7d97 20%,#9dd2d8 10%);
+    background-size: 37%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+    font-family: 'Anton', sans-serif;
+
+}
+.accroche{
+    font-size: 1.5em;
+    color: #b59bdf;
+    padding: 10px;
+}
+#home button{
+    margin: 60px;
+    position: absolute;
+    left: 10vw;
+    height: 80px;
+    width: 400px;
+    box-shadow: none;
+    border: none;
+    background-image: conic-gradient(#9dd2d8 30%, #f5ecee 10%, #ffb5cc 10%);
+    border-radius: 40px;
+    font-size: 2em;
+    color: #f5ecee;
+    cursor: pointer;
+    transition: 1s;
+    bottom: 4vh;
+}
+#home button:hover{
+    background-image: linear-gradient(150deg,#b59bdf 80%, #f5ecee 60%, #ffb5cc 20%);
+    transform: scale(1.2);
+    
+}
+
+/* -------------------------------------------- About Me -------------------------------------------- */
+#aboutMe h2{
+    background-image: linear-gradient(45deg,#9dd2d8,#b59bdf); 
+}
+.photoProfil{
+    background-color: #b59bdf;
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+    border: 4px solid #9dd2d8;
+    border-radius: 50%;
+    display: none;
+
+}
+
+
+
+#competences h2{
+    background-image: linear-gradient(45deg,#b59bdf,#5c7d97)
+}
+#services h2{
+    background-image: linear-gradient(45deg,#5c7d97,#f5ecee)
+}
+#portfolio h2{
+    background-image: linear-gradient(45deg,#f5ecee,#ffb5cc)
+}
+#contact h2{
+    background-image: linear-gradient(45deg,#ffb5cc, #9dd2d8)
+}
+
+
+footer{
+    height: 10vh;
+    background-image: conic-gradient(#ffb5cc 20%, #9dd2d8 10%, #b59bdf 40%, #5c7d97 20%,#9dd2d8 10%);
+    color: aliceblue;
+    text-align: center;
+    z-index: 2;
+    padding-top: 20px;
+}
+/* ----------------------------------------------Responsivité----------------------------------------------- */
+@media screen and (max-width:1320px){
+    nav{
+        min-height: 8vh;
+    }
+    .nav-links{
+        width: 75%;
+    }
+    .nav-links a:hover{
+        padding: 2vh;
+    }
+    .identite p{
+        font-size: 3em;
+        line-height: 1em;
+    }
+    .titre p{
+        font-size: 5em;
+        line-height: 1em;
+    }
+}
+
+
+
+
+@media screen and (max-width:885px){
+    body{
+        overflow-x: hidden;
+        /* empêche le scrolling à droite pour cacher le menu */
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-image: linear-gradient(150deg,#9dd2d8 80%, #f5ecee 60%, #ffb5cc 20%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        /* cache le menu */
+        transition: 0.5s ease-in;
+        /* transition d'une demi seconde quand on ouvre et ferme le menu */
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links a{
+        color: aliceblue;
+        text-shadow: 1px 1px 2px rgba(27, 39, 49, 0.5);
+        font-size: 1.2em;
+    }
+    .nav-links a:hover{
+        background: rgba(0, 0, 0, 0) ;
+        color: #5c7d97;
+    }
+    .burger{
+        display: block;
+    }
+    #home{
+        padding-top: 21vh;
+    }
+    .identite{
+        padding: 50px 0 30px 0;
+    }
+    .identite p{
+        font-size: 1.8em;
+    }
+    .titre p{
+        font-size: 3.4em;
+        margin-bottom: 200px;
+    }
+    .accroche{
+        font-size: 1em;
+    }
+    #home button{
+        font-size: 1.5em;
+        width: 150px;
+        height: 50px;
+        
+    }
+    .photoProfil{
+        width: 250px;
+    }
+
+}
+.nav-active{
+    transform: translateX(0%);
+    /* fait apparaitre le menu */
+    
+}
+/* animation des liens du menu */
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
