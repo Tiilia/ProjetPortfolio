@@ -280,7 +280,7 @@ footer{
 
 
 
-@media screen and (max-width:885px){
+@media screen and (max-width:768px){
     body{
         overflow-x: hidden;
         /* empêche le scrolling à droite pour cacher le menu */
