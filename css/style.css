@@ -5,49 +5,65 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --bleu: #5c7d97;
+    --vert: #9dd2d8;
+    --rosePale: #f5ecee;
+    --rose: #ffb5cc;
+    --violet: #b59bdf;
+}
+
+
 body {
     background-color: aliceblue;
     font-family: 'Poppins', sans-serif;
 }
+
 /*------------------------------------------ Mise en place de la navigation ---------------------------------*/
-nav{
+nav {
     position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 5vh;
-    background-color:aliceblue;
-    box-shadow: 0px 10px 10px 10px rgba(27, 39, 49, .05); /*horizontal vertical blur scale couleur */
-    border-bottom: 1px solid #ffb5cc;
+    background-color: aliceblue;
+    box-shadow: 0px 10px 10px 10px rgba(27, 39, 49, .05);
+    /*horizontal vertical blur scale couleur */
+    border-bottom: 1px solid var(--rose);
     z-index: 1;
 }
-.logo{
-    color: #b59bdf;
+
+.logo {
+    color: var(--violet);
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 1.4em;
 }
-.nav-links{
+
+.nav-links {
     display: flex;
     justify-content: space-around;
     width: 60%;
 }
-.nav-links li{
+
+.nav-links li {
     list-style: none;
     margin: 0 15px;
 }
-.nav-links a{
-    color: #5c7d97;
+
+.nav-links a {
+    color: var(--bleu);
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: 600;
     font-size: 1.1em;
     transition: 0.8s ease;
-    
+
 }
-.nav-links a:hover{
-    background-image: linear-gradient(20deg,rgba(255, 181, 204,.5)10%, rgba(157, 210, 216, .5) ) ; 
+
+.nav-links a:hover {
+    background-image: linear-gradient(20deg, rgba(255, 181, 204, .5)10%, rgba(157, 210, 216, .5));
     color: aliceblue;
     text-shadow: 1px 1px 2px rgba(27, 39, 49, 0.5);
     border-radius: 5px;
@@ -56,15 +72,16 @@ nav{
 }
 
 /* Buton hamburger */
-.burger{
+.burger {
     display: none;
     cursor: pointer;
 }
+
 /* construction du bouton */
-.burger div{
+.burger div {
     width: 35px;
     height: 5px;
-    background-color: #ffb5cc;
+    background-color: var(--rose);
     margin: 5px;
     border-radius: 4px;
     /* transition douce pour l'animation de la transformation burger/croix */
@@ -76,64 +93,73 @@ nav{
 
 
 /* Animation burger */
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px,9px);
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 9px);
 }
-.toggle .line2{
+
+.toggle .line2 {
     opacity: 0;
 }
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px,-9px);
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -9px);
 }
 
 
 
 
 /* palette ************************ */
-.palette{
+.palette {
     display: none;
     text-align: center;
     font-weight: 600;
     margin-top: 10px;
     padding: 10px;
-    top:10vh;
+    top: 10vh;
     position: fixed;
     color: #1b2731;
     background-color: aliceblue;
     border: 2px solid #1b2731;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
-.palette div{
+
+.palette div {
     display: inline-block;
     height: 20px;
     width: 20px;
     margin: 10px;
     border-radius: 2px;
 }
-.palette1{
-    background-color: #5c7d97;
+
+.palette1 {
+    background-color: var(--bleu);
 }
-.palette2{
-    background-color: #9dd2d8;
+
+.palette2 {
+    background-color: var(--vert);
 }
-.palette3{
-    background-color: #f5ecee;
+
+.palette3 {
+    background-color: var(--rosePale);
 }
-.palette4{
-    background-color: #ffb5cc;
+
+.palette4 {
+    background-color: var(--rose);
 }
-.palette5{
-    background-color: #b59bdf;
+
+.palette5 {
+    background-color: var(--violet);
 }
 
 
 /* Mise en place Main -----------------------------------------------*/
 
-main{
+main {
     color: #1b2731;
     margin: 0 auto;
 }
-main h2{
+
+main h2 {
     padding: 10px 30px;
     color: aliceblue;
     text-shadow: 1px 1px 2px rgba(27, 39, 49, 0.5);
@@ -148,40 +174,44 @@ main h2{
 }
 
 /* -------------------------------------------- Home -------------------------------------------- */
-#home{
-    padding-top:18vh;
+#home {
+    padding-top: 18vmin;
     text-align: center;
 }
-.identite{
+
+.identite {
     margin-left: 30vw;
     padding: 60px 0 30px 0;
-    color: #5c7d97;
+    color: var(--bleu);
     font-style: italic;
     line-height: 60px;
-    text-shadow: 1px 2px #b59bdf;
-}    
-.nom{
+    text-shadow: 1px 2px var(--violet);
+}
+
+.nom {
     margin-left: 7vw;
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 9vmin;
     font-weight: 700;
-    
+
 }
-.prenom{
-    font-size: 3em;
+
+.prenom {
+    font-size: 7vmin;
     font-weight: 500;
 }
 
-.titre{
-    margin: 0 10vw;
+.titre {
+    margin: 0 10vmin;
 }
-.titre p{    
+
+.titre p {
     text-transform: uppercase;
-    line-height: 120px;
-    font-size: 8em;
+    line-height: 15vmin;
+    font-size: 14vmin;
     font-weight: 800;
-    background-color: #f5ecee;
-    background-image: conic-gradient(#ffb5cc 20%, #9dd2d8 10%, #b59bdf 40%, #5c7d97 20%,#9dd2d8 10%);
+    background-color: var(--rosePale);
+    background-image: conic-gradient(var(--rose) 20%, var(--vert) 10%, var(--violet) 40%, var(--bleu) 20%, var(--vert) 10%);
     background-size: 37%;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -190,12 +220,14 @@ main h2{
     font-family: 'Anton', sans-serif;
 
 }
-.accroche{
+
+.accroche {
     font-size: 1.5em;
-    color: #b59bdf;
+    color: var(--violet);
     padding: 10px;
 }
-#home button{
+
+#home button {
     margin: 60px;
     position: absolute;
     left: 10vw;
@@ -203,30 +235,32 @@ main h2{
     width: 400px;
     box-shadow: none;
     border: none;
-    background-image: conic-gradient(#9dd2d8 30%, #f5ecee 10%, #ffb5cc 10%);
+    background-image: conic-gradient(var(--vert) 30%, var(--rosePale) 10%, var(--rose) 10%);
     border-radius: 40px;
     font-size: 2em;
-    color: #f5ecee;
+    color: var(--rosePale);
     cursor: pointer;
     transition: 1s;
     bottom: 4vh;
 }
-#home button:hover{
-    background-image: linear-gradient(150deg,#b59bdf 80%, #f5ecee 60%, #ffb5cc 20%);
+
+#home button:hover {
+    background-image: linear-gradient(150deg, var(--violet) 80%, var(--rosePale) 60%, var(--rose) 20%);
     transform: scale(1.2);
-    
+
 }
 
 /* -------------------------------------------- About Me -------------------------------------------- */
-#aboutMe h2{
-    background-image: linear-gradient(45deg,#9dd2d8,#b59bdf); 
+#aboutMe h2 {
+    background-image: linear-gradient(45deg, var(--vert), var(--violet));
 }
-.photoProfil{
-    background-color: #b59bdf;
+
+.photoProfil {
+    background-color: var(--violet);
     margin: 0 auto;
     width: 500px;
     height: auto;
-    border: 4px solid #9dd2d8;
+    border: 4px solid var(--vert);
     border-radius: 50%;
     display: none;
 
@@ -234,45 +268,193 @@ main h2{
 
 
 
-#competences h2{
-    background-image: linear-gradient(45deg,#b59bdf,#5c7d97)
+#competences h2 {
+    background-image: linear-gradient(45deg, var(--violet), var(--bleu))
 }
-#services h2{
-    background-image: linear-gradient(45deg,#5c7d97,#f5ecee)
+
+#services h2 {
+    background-image: linear-gradient(45deg, var(--bleu), var(--rosePale))
 }
-#portfolio h2{
-    background-image: linear-gradient(45deg,#f5ecee,#ffb5cc)
-}
-#contact h2{
-    background-image: linear-gradient(45deg,#ffb5cc, #9dd2d8)
+
+#portfolio h2 {
+    background-image: linear-gradient(45deg, var(--rosePale), var(--rose))
 }
 
 
-footer{
-    height: 10vh;
-    background-image: conic-gradient(#ffb5cc 20%, #9dd2d8 10%, #b59bdf 40%, #5c7d97 20%,#9dd2d8 10%);
+
+
+
+/* CONTACT --------------------------------------- */
+#contact {
+    background-image: linear-gradient(45deg, var(--rose), var(--vert));
+}
+
+#contact h2 {
+    background-image: linear-gradient(45deg, var(--rose), var(--vert))
+}
+
+.contact-form {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 520px;
+    height: 680px;
+    padding: 60px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(92, 125, 151, .1);
+    border-radius: 10px;
+    box-shadow: 0 5px 22px 0 var(--rosePale);
+    backdrop-filter: blur(8px);
+    border: 2px solid var(--rosePale);
+}
+
+.contact-form h3 {
     color: aliceblue;
+    margin-bottom: 25px;
     text-align: center;
-    z-index: 2;
+    font-size: 1.7em;
+    text-shadow: 1px 1px 2px rgba(27, 39, 49, 0.5);
+    font-weight: 300;
+}
+
+.contact-input,
+.contact-message {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact-box label {
+    color: aliceblue;
+    font-size: 1.2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.contact-box input:focus~label,
+.contact-box input:valid~label,
+.contact-box textarea:focus~label,
+.contact-box textarea:valid~label {
+    top: -25px;
+    font-size: 1em;
+}
+
+
+.contact-input input,
+.contact-message textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    /* border-bottom: 1px solid aliceblue; */
+    background-color: rgba(92, 125, 151, .2);
+    backdrop-filter: blur(4px);
+    font-size: 1.3em;
+    color: aliceblue;
+}
+
+.contact-buttons div {
+    display: inline;
+}
+
+.contact-buttons input {
+    width: 42%;
+    margin: 3.5%;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.contact-button-reset input {
+    background-color: rgba(92, 125, 151, .1);
+    border: 3px solid var(--vert);
+}
+
+.contact-button-submit input {
+    background-color: var(--vert);
+}
+
+.contact-buttons input:hover {
+    background-color: var(--violet);
+    transform: scale(1.2);
+}
+
+
+.ball {
+    position: absolute;
+    width: 40vmin;
+    height: 40vmin;
+    border-radius: 50%;
+}
+
+.ball-1 {
+    background-color: var(--vert);
+    top: 25%;
+    left: 45%;
+}
+
+.ball-2 {
+    background-color: var(--violet);
+    top: 15%;
+    left: 25%;
+    transform: scale(.8);
+}
+
+
+
+/* FOOTER --------------------------------------- */
+
+footer {
+    padding-top: 300px;
+    height: 100px;
+    position: relative;
+    background-image: conic-gradient(var(--rose) 20%, var(--vert) 10%, var(--violet) 40%, var(--bleu) 20%, var(--vert) 10%);
+
+    z-index: 10;
     padding-top: 20px;
 }
+
+footer p {
+    z-index: 11;
+    display: inline-block;
+    position: absolute;
+    /* bottom: 50%; */
+    font-size: 2vmin;
+    color: aliceblue;
+    /* background-color: rgba(27, 39, 49, 0.5); */
+    text-align: center;
+    margin: 0 100px;
+}
+
 /* ----------------------------------------------Responsivité----------------------------------------------- */
-@media screen and (max-width:1320px){
-    nav{
+@media screen and (max-width:1320px) {
+    nav {
         min-height: 8vh;
     }
-    .nav-links{
+
+    .nav-links {
         width: 75%;
     }
-    .nav-links a:hover{
+
+    .nav-links a:hover {
         padding: 2vh;
     }
-    .identite p{
-        font-size: 3em;
-        line-height: 1em;
+
+    .identite p {
+        font-size: 7vmin;
+        /* line-height: 1em; */
     }
-    .titre p{
-        font-size: 5em;
+
+    .titre p {
+        font-size: 12vmin;
         line-height: 1em;
     }
 }
@@ -280,80 +462,96 @@ footer{
 
 
 
-@media screen and (max-width:768px){
-    body{
+@media screen and (max-width:768px) {
+    body {
         overflow-x: hidden;
         /* empêche le scrolling à droite pour cacher le menu */
     }
-    .nav-links{
+
+    .nav-links {
         position: absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-image: linear-gradient(150deg,#9dd2d8 80%, #f5ecee 60%, #ffb5cc 20%);
+        background-image: linear-gradient(150deg, var(--vert) 80%, var(--rosePale) 60%, var(--rose) 20%);
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40%;
+        width: 60%;
         transform: translateX(100%);
         /* cache le menu */
         transition: 0.5s ease-in;
         /* transition d'une demi seconde quand on ouvre et ferme le menu */
     }
-    .nav-links li{
+
+    .nav-links li {
         opacity: 0;
     }
-    .nav-links a{
+
+    .nav-links a {
         color: aliceblue;
         text-shadow: 1px 1px 2px rgba(27, 39, 49, 0.5);
-        font-size: 1.2em;
+        font-size: 4vmin;
     }
-    .nav-links a:hover{
-        background: rgba(0, 0, 0, 0) ;
-        color: #5c7d97;
+
+    .nav-links a:hover {
+        background: rgba(0, 0, 0, 0);
+        color: var(--bleu);
+        font-size: 4.5vmin;
     }
-    .burger{
+
+    .burger {
         display: block;
     }
-    #home{
-        padding-top: 10vh;
+
+    #home {
+        padding-top: 8vh;
     }
-    .identite{
+
+    /* .identite {
         padding: 50px 0 30px 0;
-    }
-    .identite p{
+    } */
+
+    /* .identite p {
         font-size: 1.8em;
-    }
-    .titre p{
+    } */
+
+    /* .titre p {
         font-size: 3.4em;
         margin-bottom: 200px;
-    }
-    .accroche{
+    } */
+
+    .accroche {
         font-size: 1em;
     }
-    #home button{
+
+    #home button {
         font-size: 1.5em;
         width: 150px;
         height: 50px;
-        
+
     }
-    .photoProfil{
+
+    .photoProfil {
         width: 250px;
     }
 
 }
-.nav-active{
+
+.nav-active {
     transform: translateX(0%);
     /* fait apparaitre le menu */
-    
+
 }
+
 /* animation des liens du menu */
-@keyframes navLinkFade{
-    from{
+@keyframes navLinkFade {
+    from {
         opacity: 0;
         transform: translateX(50px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateX(0px);
     }
