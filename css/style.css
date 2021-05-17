@@ -299,6 +299,8 @@ main h2 {
     left: 50%;
     width: 520px;
     height: 680px;
+    max-width: 80%;
+    max-height: 80%;
     padding: 60px;
     transform: translate(-50%, -50%);
     background-color: rgba(92, 125, 151, .1);
